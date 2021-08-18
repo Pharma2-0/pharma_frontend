@@ -1,5 +1,5 @@
 import axios from 'axios';
-const url = '/api/post';
+const url = 'https://pharma20.herokuapp.com/api/post';
 
 export default class API {
     // get all products
