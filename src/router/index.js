@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Add from '../views/Add.vue'
 import Scan from '../views/Scan.vue'
 import Product from '../views/Product.vue'
 
@@ -11,6 +12,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/add',
+    name: 'add',
+    component: Add
   },
   {
     path: '/scan',

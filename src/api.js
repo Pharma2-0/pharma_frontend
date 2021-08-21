@@ -5,7 +5,6 @@ export default class API {
     // get all products
     static async getAllProducts() {
         const res = await axios.get(url);
-        console.log(res.data);
         return res.data;
     }
     
@@ -14,5 +13,11 @@ export default class API {
         const res = await axios.get(`${url}/${id}`);
         return res.data;
     }
-
+    
+    // add product
+    static async addProduct(product) {
+        const res = await axios.post(url, product);
+        return res.data;
+    }
+    
 }
