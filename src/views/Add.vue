@@ -6,26 +6,28 @@
                     <v-card-title>Add New Product</v-card-title>
                     <v-divider></v-divider>
                     <v-form ref="form" @submit.prevent="submitForm" class="pa-5" enctype="multipart/form-data">
-                        <v-text-field label="Product" v-model="product.product" prepend-icon="mdi-note" :rules="rules"></v-text-field>
+                        <v-text-field label="Product" v-model="product.product" prepend-icon="mdi-pill" :rules="rules"></v-text-field>
                         
-                        <v-text-field label="Description" v-model="product.description" prepend-icon="mdi-view-list" :rules="rules"></v-text-field>
+                        <v-text-field label="Description" v-model="product.description" prepend-icon="mdi-card-text" :rules="rules"></v-text-field>
                         
-                        <v-text-field label="Labo" v-model="product.labo" prepend-icon="mdi-note-plus" :rules="rules"></v-text-field>
+                        <v-text-field label="Labo" v-model="product.labo" prepend-icon="mdi-hospital-box" :rules="rules"></v-text-field>
                         
-                        <v-text-field label="Drug" v-model="product.drug" prepend-icon="mdi-note-plus" :rules="rules"></v-text-field>
+                        <v-text-field label="Drug" v-model="product.drug" prepend-icon="mdi-spa" :rules="rules"></v-text-field>
 
                         <v-slider label="Quant" v-model="product.quant" :rules="rules.quant" color="orange" hint="En Gramos" min="1" max="100" thumb-label></v-slider>
 
                         <v-checkbox label="BajoReceta" v-model="product.bajoreceta" value="1" type="checkbox" required></v-checkbox>
                         
-                        <v-text-field label="lote" v-model="product.lote" prepend-icon="mdi-note-plus" type="number" :rules="rules"></v-text-field>
+                        <v-text-field label="lote" v-model="product.lote" prepend-icon="mdi-stack-exchange" type="number" :rules="rules"></v-text-field>
                         
                         <v-slider label="Price" v-model="product.price" :rules="rules.price" color="green" hint="En Pesos Ars" min="1" max="100" thumb-label></v-slider>
                         
                         <span style="color:rgba(0, 0, 0, 0.6)">Elab y Venc </span>
                         <date-picker label="Elaboracion y Vencimiento" v-model="time3" range></date-picker>
                         <br>
-                        <v-btn type="sumbit" class="mt-3" color="primary">Add Product</v-btn>
+                        <div class="sumbit" style="text-align: right">
+                            <v-btn type="sumbit" class="mt-3" color="primary">Add Product</v-btn>
+                        </div>
 
                     </v-form>
                 </v-card>
@@ -65,7 +67,7 @@ export default {
 
             formData["elab"] = elab;
             formData["venc"] = venc;
-            formData["qrcode"] = Math.random() * 100000000000000000;
+            formData["qrcode"] = (Math.random() * 100000000000000000).toString();
             
             console.log(formData);
             

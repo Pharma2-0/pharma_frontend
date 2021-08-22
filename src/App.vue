@@ -53,7 +53,7 @@
       drawer: null,
       items: [
         {title: "Home", icon: 'mdi-home', link: "/"},
-        {title: "Add", icon: 'mdi-qrcode-scan', link: "/add"},
+        {title: "Add", icon: 'mdi-plus', link: "/add"},
         {title: "Scan", icon: 'mdi-qrcode-scan', link: "/scan"},
         {title: "Catalogue", icon: 'mdi-pill', link: "/catalogue"}
       ]

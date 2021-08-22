@@ -23,6 +23,7 @@
                     <p>{{ product.description }}</p>
                     <p>{{ product.labo }}</p>
                 </v-card-text>
+                <vue-qr text="product.qrcode" :size="200"></vue-qr>
               </v-card>
           </v-col>
       </v-row>
@@ -30,9 +31,11 @@
 </template>
 
 <script>
+    import VueQr from 'vue-qr'
     import API from '../api';   
     export default {
         name: "Product",
+        components: {VueQr},
         data() {
             return {
                 product: {}
