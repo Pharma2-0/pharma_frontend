@@ -23,7 +23,7 @@
                     <p>{{ product.description }}</p>
                     <p>{{ product.labo }}</p>
                 </v-card-text>
-                <vue-qr text="product.qrcode" :size="200"></vue-qr>
+                <vue-qr :text="product.qrcode" :size="200"></vue-qr>
               </v-card>
           </v-col>
       </v-row>
