@@ -43,6 +43,7 @@
         },
         async created() {
             const response = await API.getProductByQRCode(this.$route.params.id);
+            console.log(response);
             this.product = response;
         }
     };

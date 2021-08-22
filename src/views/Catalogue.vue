@@ -5,7 +5,7 @@
     </v-alert>
         <v-row no-gutters>
             <v-col sm="4" class="pa-3" v-for="product in products" :key="product._id">
-                <v-card class="pa-1">
+                <v-card class="pa-1" :to="{ name: 'product' , params: { id: product.qrcode }}">
                     <v-card-title class="headline">
                         {{product.product}}
                     </v-card-title>
