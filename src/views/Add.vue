@@ -69,7 +69,7 @@ export default {
             formData["venc"] = venc;
             formData["qrcode"] = (Math.random() * 100000000000000000).toString();
             
-            console.log(formData);
+            //console.log(formData);
             
             if(this.$refs.form.validate()){
                 const response = await API.addProduct(formData);
